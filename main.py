@@ -25,7 +25,7 @@ def take_command():
             command = listener.recognize_google(voice)
             command = command.lower()
             if 'nipa' in command:
-                command = command.replace('alexa', '')
+                command = command.replace('nipa', '')
                 print(command)
     except:
         pass
@@ -39,7 +39,7 @@ def run_nipa():
         song = command.replace('play', '')
         talk('playing' + song)
         pywhatkit.playonyt(song)
-    elif'hai' in command:
+    elif'hello' in command:
         print('Hello!')
         talk("Hello")
         talk('How are you!')
@@ -82,6 +82,13 @@ def run_nipa():
             talk(elements)
     elif 'when' in command:
         googlesearch = command.replace('when',' ')
+        browser = webdriver.Chrome('chromedriver.exe')
+        for i in range(1):
+            elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
+            print(elements)
+            talk(elements)
+    elif 'who' in command:
+        googlesearch = command.replace('wh0',' ')
         browser = webdriver.Chrome('chromedriver.exe')
         for i in range(1):
             elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
