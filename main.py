@@ -17,7 +17,7 @@ def talk(text):
     engine.runAndWait()
 
 
-def take_command():
+def take_command( ):
     try:
         with sr.Microphone() as source:
             print('listening...')
