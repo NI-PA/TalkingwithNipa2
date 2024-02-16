@@ -9,7 +9,7 @@ def get_next_cache_dir():
         # during installation process
         os.chdir(os.path.dirname(sys.executable))
         import comtypes.client
-        return comtypes.client._code_cache._find_gen_dir()
+        return comtypes.client._code_cache._find_gen_dir( )
     except ImportError:
         return None
     finally:
