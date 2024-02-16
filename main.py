@@ -36,7 +36,7 @@ def run_nipa():
     command = take_command()
     print(command)
     if 'play' in command:
-        song = command.replace('play', '')
+        song = command.replace('play', ' ')
         talk('playing' + song)
         pywhatkit.playonyt(song)
     elif'hello' in command:
