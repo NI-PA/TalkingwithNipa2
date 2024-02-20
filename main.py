@@ -6,6 +6,7 @@ import wikipedia
 import pyjokes
 from selenium import webdriver
 
+//node run
 
 listener=sr.Recognizer( )
 engine = pyttsx3.init()
