@@ -42,7 +42,7 @@ def run_nipa():
         talk('playing' + song)
         pywhatkit.playonyt(song)
     elif'hello' in command:
-        print('Hello!')
+        print('Hello!!')
         talk("Hello")
         talk('How are you!')
 
