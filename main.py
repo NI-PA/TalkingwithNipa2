@@ -38,7 +38,7 @@ def run_nipa():
     command = take_command()
     print(command)
     if 'play' in command:
-        song = command.replace('play', ' ')
+        song = command.replace('play', '')
         talk('playing' + song)
         pywhatkit.playonyt(song)
     elif'hello' in command:
@@ -62,21 +62,21 @@ def run_nipa():
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     elif 'search' in command:
-        googlesearch = command.replace('search',' ')
+        googlesearch = command.replace('search','')
         browser = webdriver.Chrome('chromedriver.exe')
         for i in range(1):
             elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
             print(elements)
             talk(elements)
     elif 'what' in command:
-        googlesearch = command.replace('what',' ')
+        googlesearch = command.replace('what','')
         browser = webdriver.Chrome('chromedriver.exe')
         for i in range(1):
             elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
             print(elements)
             talk(elements)
     elif 'how' in command:
-        googlesearch = command.replace('how',' ')
+        googlesearch = command.replace('how','')
         browser = webdriver.Chrome('chromedriver.exe')
         for i in range(1):
             elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
