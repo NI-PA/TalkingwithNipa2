@@ -16,13 +16,13 @@ engine.setProperty('voice',voices[1].id)
 
 def talk(text):
     engine.say(text)
-    engine.runAndWait()
+    engine.runAndWait( )
 
 
 def take_command( ):
     try:
         with sr.Microphone() as source:
-            print('listening...' )
+            print('listening...')
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
