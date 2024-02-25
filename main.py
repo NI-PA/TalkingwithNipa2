@@ -27,7 +27,7 @@ def take_command( ):
             command = listener.recognize_google(voice)
             command = command.lower()
             if 'nipa' in command:
-                command = command.replace('nipa', '')
+                command = command.replace('nipa','')
                 print(command)
     except:
         pass
