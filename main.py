@@ -51,7 +51,7 @@ def run_nipa():
         print(time)
         talk('Current time is' + time)
     elif 'who the person is' in command:
-        person = command.replace('who the person is', '')
+        person = command.replace('who the person is','')
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
@@ -79,7 +79,7 @@ def run_nipa():
         googlesearch = command.replace('how','')
         browser = webdriver.Chrome('chromedriver.exe')
         for i in range(1):
-            elements = browser.get("http://www.google.com/search?q=" + googlesearch + "&start" + str(i))
+            elements = browser.get("http://www.google.com/search?q=" +googlesearch +"&start" + str(i))
             print(elements)
             talk(elements)
     elif 'when' in command:
