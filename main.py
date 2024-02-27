@@ -102,7 +102,7 @@ def run_nipa():
         talk('good bye')
         quit()
     else:
-        talk('Please say the command again')
+        talk('Please say the command again, Tabi')
 
 
 while True:
