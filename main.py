@@ -27,7 +27,7 @@ def take_command( ):
             command = listener.recognize_google(voice)
             command = command.lower()
             if 'nipa' in command:
-                command = command.replace('nipa','')
+                command = command.replace('nipa',' ')
                 print(command)
     except:
         pass
@@ -38,7 +38,7 @@ def run_nipa():
     command = take_command()
     print(command)
     if 'play' in command:
-        song = command.replace('play','')
+        song = command.replace('play',' ')
         talk('playing' + song)
         pywhatkit.playonyt(song)
     elif'hello' in command:
@@ -51,7 +51,7 @@ def run_nipa():
         print(time)
         talk('Current time is' + time)
     elif 'who the person is' in command:
-        person = command.replace('who the person is','')
+        person = command.replace('who the person is',' ')
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
